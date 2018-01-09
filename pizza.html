@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pizza</title>
+	<link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+
+<h1>Pizza… the way it oughta be.</h1>
+
+<div id="wrapper">
+  <div id="container">  
+    <form action="#" class="validate-form" >
+     <div class="field">
+     <input type="text" name="username" class="inputValidation" id="username" placeholder="Username" required="required"/>
+     <div class="errorMessage"></div>
+    </div>
+     <div class="field">
+    <input type="password" class="inputValidation" placeholder="Password" id="password">
+    <div class="errorMessage1"></div>
+    </div>
+    <button type="button" id="login">Log In</button>
+    </form>
+  </div>
+</div>
+
+
+<div id="welcome" style="display:none">  
+   <h3>Welcome!   <span id="active_user"></span></h3>
+<form  id="form1" align="right" name="form1" method="post">    
+    <button type="button"value="logout" id="logout">Leave</button>
+    <button type="button"  id="orders">Orders</button>
+</form>
+</div>
+<div class='errorWindow'></div>
+
+
+<div id="order-list"  style="display:none" >
+ <h3>You ordered</h3>
+ <table>  
+ </table>
+
+</div>
+
+<div class="box">
+  <div class="combine">
+    <h3>Choose size</h3>
+
+      <div class="column-labels">     
+        <label class="title">Size</label>
+        <label class="price">Price</label>
+        <label class="quantity">Quantity</label>
+       <label class="line-price">Total</label>
+      </div>
+
+      <div class="product">    
+        <div class="title">Big(diameter - 40cm)</div> 
+        <div class="price">12</div>
+        <div class="quantity">
+          <input  type="number" class="number0" value="0" min="0" max="30" data-type ="big"/>
+        </div>    
+        <div class="line-price">0.00</div>
+      </div>
+
+     <div class="product">    
+      <div class="title">Medium(diameter - 30cm)</div> 
+      <div class="price">9</div>
+      <div class="quantity">
+        <input  type="number" class="number1" value="0" min="0" max="30" data-type ="medium"/>
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>
+
+     <div class="product">    
+      <div class="title">Small(diameter - 20cm)</div> 
+      <div class="price">7</div>
+      <div class="quantity">
+        <input  type="number" class="number2" value="0" min="0" max="30" data-type ="small"/>
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>
+    </div>
+    </div>
+    <div class="box1">
+  <div class="combine">
+    <h3>Combine your pizza</h3>
+
+    <div class="column-labels">  
+      <label class="title">Product</label>
+      <label class="price">Price</label>
+      <label class="quantity">Quantity</label>
+     <label class="line-price">Total</label>
+    </div>
+
+    <div class="product">    
+      <div class="title">Mushrooms(1 portion - 50g)</div> 
+      <div class="price">2</div>
+      <div class="quantity" data-type="mushrooms">
+        <input type="number" value="0" min="0" max="30" data-type ="mushrooms">
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>  
+
+    <div class="product">   
+      <div class="title">Tomatoes(1 portion - 50g)</div> 
+      <div class="price">1</div>
+      <div class="quantity">
+        <input type="number" value="0" min="0" max="30" data-type ="tomatoes">
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>
+
+    <div class="product">   
+      <div class="title">Parmesan(1 portion - 50g)</div>      
+      <div class="price">3</div>
+      <div class="quantity">
+        <input type="number" value="0" min="0" max="30" data-type ="parmesan">
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>
+
+    <div class="product">   
+      <div class="title">Olives(1 portion - 30g)</div>      
+      <div class="price">2</div>
+      <div class="quantity">
+        <input type="number" value="0" min="0" max="30" data-type ="olives">
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>
+
+    <div class="product">   
+      <div class="title">Pineapple(1 portion - 50g)</div>      
+      <div class="price">3</div>
+      <div class="quantity">
+        <input type="number" value="0" min="0" max="30" data-type ="pineapple">
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>
+
+    <div class="product">   
+      <div class="title">Chicken(1 portion - 50g)</div>      
+      <div class="price">2</div>
+      <div class="quantity">
+        <input type="number" value="0" min="0" max="30" data-type ="chicken">
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>
+     <div class="product">   
+      <div class="title">Ham(1 portion - 50g)</div>      
+      <div class="price">1</div>
+      <div class="quantity">
+        <input type="number" value="0" min="0" max="30" data-type ="ham">
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>
+    <div class="product">   
+      <div class="title">Bacon(1 portion - 50g)</div>      
+      <div class="price">1</div>
+      <div class="quantity">
+        <input type="number" value="0" min="0" max="30" data-type ="bacon">
+      </div>    
+      <div class="line-price">0.00</div>
+    </div>
+
+</div>
+ 
+  <div class="totals"> 
+    <div class="totals-item">
+      <label>Total check</label>
+      <div class="totals-value" id="total">0.00</div>
+    </div>    
+
+      <button  type="button" class="checkout">Order</button>
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<div id="modal" style="display:none;">
+   <div class="overlay"></div>
+      <div class="visible">
+       <span class="close">&times;</span>
+       <h3>Choose our delicious pizza first!</h3>        
+      </div>
+    </div>
+</div>
+
+<div id="thanks" style="display:none;">
+   <div class="overlay"></div>
+      <div class="visible">
+       <span class="close">&times;</span>
+        <h3>Thanks! I'm coming! Wait for me.Your pizza!</h3>
+            
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+  <script src="main.js" ></script>
+</body>
+</html>
